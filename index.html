@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Facebook Sign In - BookNStay</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d8bf2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        :root {
+            --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark flex items-center justify-center min-h-screen">
+<div class="relative flex h-auto w-full max-w-md flex-col bg-white dark:bg-background-dark group/design-root overflow-hidden rounded-xl shadow-lg font-display">
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="text-blue-600 flex size-12 shrink-0 items-center justify-center">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v7.039A9.951 9.951 0 0 0 22 12z"></path>
+</svg>
+</div>
+<h2 class="text-[#111518] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Continue to BookNStay</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#111518] dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<h1 class="text-[#111518] dark:text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-6">Log in to BookNStay with your Facebook account?</h1>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="John Doe's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAvrJwBb1zpZx_6Jeg5NBs--I-l5SYYxVdoCqASCsDzQf9_XMsls2mqi5nYLMHDaYmGrWpTEKktyYG8EnZrnNETAXpE3E5A2Hau_99aXOf8tDj5IE1-q24ZtHxRDLyDLPToCoCeFa6BO4m5tZWVRZ-jqPfrXdyVh6_n4o05XtehxZ3G09IQJ-sfXq_LgB_wC8U7kqcEhVWQLLIoOGBQ6qmbt--ZVsO0LjeejT_1zAOrZpZzZxQx89IiGknsVd0LaEr7SY1Y_ulQvg");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111518] dark:text-white text-base font-medium leading-normal line-clamp-1">John Doe</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">john.doe@example.com</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex size-7 items-center justify-center">
+<input checked="" class="h-5 w-5 rounded-full border-gray-300 dark:border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-gray-300 dark:focus:border-gray-600 focus:outline-none" type="checkbox"/>
+</div>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal pb-3 pt-1 px-4">BookNStay will receive your name, profile picture, and email address. See our <a class="text-primary hover:underline" href="#">Privacy Policy</a>.</p>
+<div class="flex px-4 py-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Continue as John</span>
+</button>
+</div>
+<div class="flex px-4 pt-1 pb-4">
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-transparent text-primary text-base font-bold leading-normal tracking-[0.015em] border-2 border-primary/30 hover:bg-primary/10" href="#">
+<span class="truncate">Log in to another account</span>
+</a>
+</div>
+</div>
+</body></html>
