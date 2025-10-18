@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<title>BookNStay Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d8bf2",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center justify-center bg-white group/design-root overflow-x-hidden p-4">
+<div class="flex w-full max-w-md flex-col items-center">
+<h1 class="text-[#111518] tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-8 pt-6 font-display">BookNStay</h1>
+<div class="w-full flex flex-col gap-4">
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111518] text-base font-medium leading-normal pb-2">Email Address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe1e6] bg-white h-14 placeholder:text-[#60778a] p-[15px] text-base font-normal leading-normal" placeholder="Enter your email" value=""/>
+</label>
+</div>
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#111518] text-base font-medium leading-normal pb-2">Password</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe1e6] bg-white h-14 placeholder:text-[#60778a] p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<div class="text-[#60778a] flex border border-[#dbe1e6] bg-white items-center justify-center pr-[15px] rounded-r-lg border-l-0">
+<span class="material-symbols-outlined" style="font-size: 24px;">visibility_off</span>
+</div>
+</div>
+</label>
+</div>
+<div class="flex px-0 py-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Login</span>
+</button>
+</div>
+<div class="flex px-0 py-0 justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-transparent text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:text-primary/80 transition-colors">
+<span class="truncate">Forgot Password?</span>
+</button>
+</div>
+</div>
+<div class="flex w-full items-center gap-4 py-4">
+<hr class="flex-1 border-t border-[#dbe1e6]"/>
+<p class="text-[#60778a] text-sm">Or continue with</p>
+<hr class="flex-1 border-t border-[#dbe1e6]"/>
+</div>
+<div class="flex w-full items-center justify-center gap-4">
+<button class="flex h-12 w-12 items-center justify-center rounded-full border border-[#dbe1e6] bg-white hover:bg-gray-50 transition-colors">
+<img alt="Google logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARKsY-p-6zj4Bd3XsbTUNc7G6RT9regepk8kx0zrkrctWqDoVYbswkK3I1MaIX0lD6vToSzeQ0hBB67SbzeFJX1kE86abu6HPSBWE6YifT-EiXH6KgpDpYZqDuLveZ5_KDD9m5Clhz4kSTZ12EEP6dFpnlj-NdcPOXWMWak69BlQ1Hwub9-gLkGngb9-Qy_fdICfPQ6jAUOWIQaBtjzzPdU_Wgyy-subQVqIpHjV5wd8TkDbguQKnvD5b-hyh2SKhzhvmmptQ5aEE"/>
+</button>
+<button class="flex h-12 w-12 items-center justify-center rounded-full border border-[#dbe1e6] bg-white hover:bg-gray-50 transition-colors">
+<img alt="Facebook logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKoiY7Ce1xNCbg4Gj953bH1JrOcfzp-cMIR9wxrRy88NgpmiSfFy1QfdRs8YicgHQ18IoSKUVW94r4KHxdG6osAWbMRU3rkgwyfvrxGxmRURZ3Eki73U9zfY885WQy_SqqmPukn_edcjCwrI9T6GsgYNOblCceEYiuh9twy1xGVyMkfd-KN33u7PBsNv4QCk7K6Yp8vWtCmEzqAzHkvg3mmGmi1Wn2pVcCCkUYX6NN-zMclIdc-MiBreG0zfmYzT1Z89W9OIyiJzs"/>
+</button>
+</div>
+<div class="flex px-0 pt-8 pb-3 justify-center">
+<button class="flex cursor-pointer items-center justify-center bg-transparent text-sm font-medium text-[#111518]">
+<span class="truncate">Don't have an account? <span class="font-bold text-primary hover:text-primary/80 transition-colors">Sign Up</span></span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
