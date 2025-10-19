@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dates &amp; Guests Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#131af6",
+            "background-light": "#f5f6f8",
+            "background-dark": "#101022",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#f8f8fc] group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="flex items-center bg-[#f8f8fc] p-4 pb-2 justify-end">
+<div class="text-[#0d0d1c] flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">close</span>
+</div>
+</div>
+<div class="px-4 py-3 opacity-50">
+<div class="flex h-10 flex-1 items-center justify-center rounded-xl bg-[#e7e7f4] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-[#f8f8fc] has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-[#0d0d1c] text-[#484b9d] text-sm font-medium leading-normal">
+<span class="truncate">Stays</span>
+<input checked="" class="invisible w-0" name="top-tabs" type="radio" value="Stays"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-[#f8f8fc] has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-[#0d0d1c] text-[#484b9d] text-sm font-medium leading-normal">
+<span class="truncate">Experience</span>
+<input class="invisible w-0" name="top-tabs" type="radio" value="Experience"/>
+</label>
+</div>
+</div>
+<div class="border-b border-gray-200 dark:border-gray-700 mx-4"></div>
+<h2 class="text-[#0d0d1c] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">When?</h2>
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-xl bg-[#e7e7f4] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:shadow-[0_0_4px_rgba(19,27,246,0.5)] text-[#484b9d] text-sm font-medium leading-normal">
+<span class="truncate">Dates</span>
+<input checked="" class="invisible w-0" name="date-selection-mode" type="radio" value="Dates"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:shadow-[0_0_4px_rgba(19,27,246,0.5)] text-[#484b9d] text-sm font-medium leading-normal">
+<span class="truncate">Month</span>
+<input class="invisible w-0" name="date-selection-mode" type="radio" value="Month"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:shadow-[0_0_4px_rgba(19,27,246,0.5)] text-[#484b9d] text-sm font-medium leading-normal">
+<span class="truncate">Flexible</span>
+<input class="invisible w-0" name="date-selection-mode" type="radio" value="Flexible"/>
+</label>
+</div>
+</div>
+<div class="flex flex-wrap items-start justify-center gap-6 p-4">
+<div class="flex min-w-72 max-w-[336px] flex-1 flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between">
+<button>
+<div class="text-[#0d0d1c] flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-lg">arrow_back_ios</span>
+</div>
+</button>
+<p class="text-[#0d0d1c] text-base font-bold leading-tight flex-1 text-center">May 2024</p>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">W</p>
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">F</p>
+<p class="text-[#0d0d1c] text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<button class="h-12 w-full text-gray-300 col-start-4 text-sm font-medium leading-normal" disabled="">
+<div class="flex size-full items-center justify-center rounded-full">1</div>
+</button>
+<button class="h-12 w-full text-gray-300 text-sm font-medium leading-normal" disabled=""><div class="flex size-full items-center justify-center rounded-full">2</div></button>
+<button class="h-12 w-full text-gray-300 text-sm font-medium leading-normal" disabled=""><div class="flex size-full items-center justify-center rounded-full">3</div></button>
+<button class="h-12 w-full text-gray-300 text-sm font-medium leading-normal" disabled=""><div class="flex size-full items-center justify-center rounded-full">4</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">5</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">6</div></button>
+<button class="h-12 w-full text-white rounded-l-full bg-primary/20 text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary">7</div>
+</button>
+<button class="h-12 w-full bg-primary/20 text-[#0d0d1c] text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full">8</div>
+</button>
+<button class="h-12 w-full bg-primary/20 text-[#0d0d1c] text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full">9</div>
+</button>
+<button class="h-12 w-full bg-primary/20 text-[#0d0d1c] text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full">10</div>
+</button>
+<button class="h-12 w-full bg-primary/20 text-[#0d0d1c] text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full">11</div>
+</button>
+<button class="h-12 w-full text-white rounded-r-full bg-primary/20 text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary">12</div>
+</button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">13</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">14</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">15</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">16</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">17</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">18</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">19</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">24</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">25</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-[#0d0d1c] text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">31</div></button>
+</div>
+</div>
+</div>
+<div class="flex gap-2 px-4 py-2 overflow-x-auto">
+<button class="px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">Exact dates</button>
+<button class="px-4 py-2 text-sm font-medium text-[#0d0d1c] bg-[#e7e7f4] rounded-full">1 day</button>
+<button class="px-4 py-2 text-sm font-medium text-[#0d0d1c] bg-[#e7e7f4] rounded-full">2 days</button>
+<button class="px-4 py-2 text-sm font-medium text-[#0d0d1c] bg-[#e7e7f4] rounded-full">3 days+</button>
+</div>
+<div class="flex justify-between items-center px-4 py-4">
+<button class="text-sm font-medium text-[#0d0d1c] underline">Clear</button>
+<button class="px-8 py-3 text-base font-bold text-white bg-primary rounded-xl shadow-lg">Next</button>
+</div>
+<div class="border-b border-gray-200 dark:border-gray-700 mx-4 mt-4"></div>
+<div class="px-4 py-5 opacity-50">
+<h2 class="text-[#0d0d1c] text-lg font-bold leading-tight tracking-[-0.015em]">Who?</h2>
+<p class="text-gray-500">4 Guest</p>
+</div>
+<div class="border-b border-gray-200 dark:border-gray-700 mx-4"></div>
+<div class="flex justify-between items-center px-4 py-5 opacity-50">
+<button class="text-sm font-medium text-[#0d0d1c] underline">Clear All</button>
+<button class="px-8 py-3 text-base font-bold text-white bg-gray-400 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">search</span>
+            Search
+        </button>
+</div>
+</div>
+</body></html>
