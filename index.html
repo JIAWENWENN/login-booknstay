@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filter Hotels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d20f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101122",
+                        "text-light": "#6b7280",
+                        "text-dark": "#1f2937",
+                        "border-light": "#e5e7eb",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white font-display text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden">
+<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10 border-b border-border-light">
+<div class="text-text-dark flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">close</span>
+</div>
+<h2 class="text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Filter by</h2>
+<div class="flex w-12 items-center justify-end"><p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0">Reset</p></div>
+</div>
+<div class="flex-grow overflow-y-auto pb-32">
+<div class="flex flex-col p-4">
+<details class="flex flex-col border-t border-t-border-light py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Previous Filters</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 space-y-3">
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Swimming Pool (23)</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Free Wifi (112)</span></label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Popular Filters for Simpang Kanan</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 space-y-3">
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Water Park (1)</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Resort (5)</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Breakfast included (78)</span></label>
+</div>
+</details>
+</div>
+<h3 class="text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Budget</h3>
+<div class="relative flex w-full flex-col items-start justify-between gap-3 p-4 @[480px]:flex-row">
+<div class="flex h-[38px] w-full pt-1.5">
+<div class="flex h-1 w-full rounded-sm bg-border-light items-center">
+<div class="relative w-[20%]">
+<div class="absolute -left-2 -top-2 flex flex-col items-center">
+<div class="size-4 rounded-full bg-primary border-2 border-white"></div>
+</div>
+</div>
+<div class="h-1 flex-1 bg-primary"></div>
+<div class="relative w-[20%]">
+<div class="absolute -right-2 -top-2 flex flex-col items-center">
+<div class="size-4 rounded-full bg-primary border-2 border-white"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-dark text-base font-medium leading-normal pb-2">Min budget</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-dark focus:outline-0 focus:ring-0 border border-border-light bg-background-light focus:border-primary h-14 placeholder:text-text-light p-[15px] text-base font-normal leading-normal" value="$200"/>
+</label>
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-dark text-base font-medium leading-normal pb-2">Max budget</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-dark focus:outline-0 focus:ring-0 border border-border-light bg-background-light focus:border-primary h-14 placeholder:text-text-light p-[15px] text-base font-normal leading-normal" value="$800"/>
+</label>
+</div>
+<div class="flex flex-col p-4 space-y-2">
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Family essentials</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 space-y-3">
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Cribs (15)</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Playground (8)</span></label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Star rating</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 space-y-3">
+<label class="flex items-center gap-3"><input class="form-radio bg-background-light border-border-light text-primary focus:ring-primary" name="star-rating" type="radio"/><span class="text-text-light text-sm">5 Stars (10)</span></label>
+<label class="flex items-center gap-3"><input class="form-radio bg-background-light border-border-light text-primary focus:ring-primary" name="star-rating" type="radio"/><span class="text-text-light text-sm">4 Stars (25)</span></label>
+<label class="flex items-center gap-3"><input class="form-radio bg-background-light border-border-light text-primary focus:ring-primary" name="star-rating" type="radio"/><span class="text-text-light text-sm">3 Stars (40)</span></label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Property Type</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 space-y-3">
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Hotel (95)</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Resort (5)</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-background-light border-border-light text-primary focus:ring-primary" type="checkbox"/><span class="text-text-light text-sm">Apartment (12)</span></label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Amenities</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Room facilities &amp; services</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Meals</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+</details>
+<details class="flex flex-col border-t border-t-border-light py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-text-dark text-sm font-medium leading-normal">Booking Policy</p>
+<span class="material-symbols-outlined text-text-dark group-open:rotate-180">expand_more</span>
+</summary>
+</details>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-white p-4 border-t border-t-border-light">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm text-text-dark">Applied Filter:</span>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-background-light text-text-dark rounded-full px-3 py-1 text-sm">
+<span>Water park</span>
+<span class="material-symbols-outlined text-base cursor-pointer">close</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-lg text-lg">Show Results(1)</button>
+</div>
+</div>
+</body></html>
