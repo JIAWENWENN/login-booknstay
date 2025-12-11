@@ -3,11 +3,11 @@
 <html class="" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Verification Email Sent Popup</title>
-<!-- Google Fonts -->
+<title>Forgot Password</title>
+<!-- Google Fonts: Manrope -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -15,31 +15,38 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Theme Configuration -->
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#0e3286",
-              "background-light": "#f6f6f8",
-              "background-dark": "#111621",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e3286",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem", 
+                        "lg": "2rem", 
+                        "xl": "3rem", 
+                        "full": "9999px"
+                    },
+                },
             },
-            fontFamily: {
-              "display": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-            boxShadow: {
-                'glow': '0 0 20px rgba(14, 50, 134, 0.3)',
-            }
-          },
-        },
-      }
+        }
     </script>
 <style>
-        /* Custom utilities if needed */
-        .glass-panel {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
         }
     </style>
 <style>
@@ -53,83 +60,55 @@
     }
   </style>
   </head>
-<body class="font-display bg-background-light dark:bg-background-dark min-h-screen relative overflow-hidden flex flex-col">
-<!-- BACKGROUND CONTEXT (Simulated App Screen behind modal) -->
-<!-- This section creates the illusion of the app running in the background -->
-<div aria-hidden="true" class="absolute inset-0 z-0 flex flex-col pointer-events-none opacity-20 dark:opacity-40">
-<!-- Header Image Area -->
-<div class="relative h-64 w-full bg-gray-300 dark:bg-gray-800">
-<div class="w-full h-full bg-cover bg-center grayscale" data-alt="Blurred background of a luxury hotel lobby" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAifvF6YBWUZRK9iteEJ7MsG0psNJ1wBi3evjtUb8SAChZ_B7PuxsED0KSz3AJfZEoEh1OExR1zWHGi3yMZ9qDY2tls4mIXSRCsuHFR5_-f_XH2BioD9P5dggw3f4LUSYXigPDGZNmGaHEOuyFTnba63TPyfoko-dNp8hhKHpErHYPor2k4ycCFpPXgZptE0yvXW1n55lzY4qBV06G2McZkDRxB5azL3GwD1LXjYi0H2R7yu4N8rKT592Wxs6nYbTcR7sq1C-ZY4ZU');"></div>
-<div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/60 to-transparent"></div>
-</div>
-<!-- App Content Area -->
-<div class="flex-1 p-5 space-y-6 bg-background-light dark:bg-background-dark">
-<div class="flex justify-between items-start">
-<div class="space-y-2 w-2/3">
-<div class="h-8 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
-<div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
-</div>
-<div class="h-12 w-12 rounded-full bg-gray-300 dark:bg-gray-700"></div>
-</div>
-<div class="grid grid-cols-4 gap-4 py-4">
-<div class="h-16 rounded-2xl bg-gray-200 dark:bg-gray-800"></div>
-<div class="h-16 rounded-2xl bg-gray-200 dark:bg-gray-800"></div>
-<div class="h-16 rounded-2xl bg-gray-200 dark:bg-gray-800"></div>
-<div class="h-16 rounded-2xl bg-gray-200 dark:bg-gray-800"></div>
-</div>
-<div class="space-y-4">
-<div class="h-40 rounded-2xl bg-gray-300 dark:bg-gray-700 w-full"></div>
-<div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-full"></div>
-<div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-5/6"></div>
-</div>
-</div>
-</div>
-<!-- MODAL OVERLAY -->
-<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 sm:p-6 bg-[#000000]/80 backdrop-blur-sm">
-<!-- MODAL CARD -->
-<div class="relative w-full max-w-sm bg-white dark:bg-[#1C2333] rounded-[2rem] p-6 sm:p-8 shadow-2xl animate-in slide-in-from-bottom-10 duration-500 ease-out flex flex-col items-center text-center">
-<!-- Close Button -->
-<button class="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-white/5">
-<span class="material-symbols-outlined text-[20px]">close</span>
+<body class="bg-background-light dark:bg-background-dark text-[#111621] dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top Navigation -->
+<div class="flex items-center px-4 pt-6 pb-2 justify-between">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#111621] dark:text-white text-[24px]">arrow_back</span>
 </button>
-<!-- Icon Container -->
-<div class="mb-6 relative group">
-<!-- Outer Glow Ring -->
-<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl transform scale-150"></div>
-<!-- Circle Background -->
-<div class="relative w-24 h-24 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary/10 dark:border-primary/30">
-<span class="material-symbols-outlined text-primary text-[48px] dark:text-[#3b6cdb]" style="font-variation-settings: 'FILL' 1;">mail</span>
-<!-- Notification Dot Badge -->
-<div class="absolute top-0 right-0 h-6 w-6 bg-red-500 rounded-full border-4 border-white dark:border-[#1C2333]"></div>
+</div>
+<!-- Main Content Area -->
+<div class="flex flex-col flex-1 px-6 pt-4 pb-8">
+<!-- Hero Visual: Lock Icon -->
+<div class="flex justify-center mb-8 mt-4">
+<div class="flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary text-[48px]">lock</span>
 </div>
 </div>
-<!-- Title -->
-<h2 class="text-gray-900 dark:text-white text-2xl sm:text-[28px] font-extrabold leading-tight mb-3">
-                Verify Your Email
-            </h2>
-<!-- Body Text -->
-<p class="text-gray-500 dark:text-gray-300 text-base font-medium leading-relaxed mb-8 px-2">
-                We've sent a verification link to <br class="hidden sm:block"/>
-<span class="text-gray-900 dark:text-white font-bold">user@example.com</span>
-</p>
-<!-- Primary Action Button -->
-<div class="w-full mb-4">
-<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 bg-primary hover:bg-[#0b286d] text-white text-base font-bold leading-normal tracking-wide shadow-glow transition-all active:scale-[0.98]">
-                    OPEN EMAIL APP
+<!-- Headlines -->
+<div class="flex flex-col gap-2 mb-8 text-center">
+<h1 class="text-[#111621] dark:text-white text-[32px] font-bold leading-tight tracking-tight">Reset Your Password</h1>
+<p class="text-[#4b5563] dark:text-[#9ca3af] text-base font-normal leading-normal">
+                    Enter your email address and we'll send you instructions to reset your password.
+                </p>
+</div>
+<!-- Form Section -->
+<div class="flex flex-col gap-6 w-full">
+<!-- Email Input -->
+<div class="flex flex-col gap-2">
+<label class="text-[#111621] dark:text-white text-base font-medium leading-normal ml-1">Email</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 pl-4 pr-12 rounded-xl bg-white dark:bg-[#1a2132] border border-[#d1d5db] dark:border-[#344365] text-[#111621] dark:text-white placeholder:text-[#9ca3af] dark:placeholder:text-[#93a3c8] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-base font-normal transition-all" placeholder="example@email.com" type="email" value=""/>
+<div class="absolute right-4 flex items-center pointer-events-none text-[#9ca3af] dark:text-[#93a3c8]">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-14 bg-primary hover:bg-primary/90 active:scale-[0.98] text-white text-base font-bold rounded-full transition-all duration-200 shadow-lg shadow-primary/20 flex items-center justify-center mt-2">
+                    SEND RESET LINK
                 </button>
 </div>
-<!-- Secondary Action (Resend) -->
-<div class="w-full mb-6">
-<button class="flex w-full cursor-pointer items-center justify-center rounded-full h-auto py-2 bg-transparent text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal tracking-[0.015em] hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
-<span>Didn't receive? <span class="text-primary dark:text-[#4a7eff] font-bold ml-1">Resend Email</span></span>
-</button>
+<!-- Spacer to push footer down if needed, but flex-col handles layout naturally -->
+<div class="flex-1 min-h-[40px]"></div>
+<!-- Footer Link -->
+<div class="flex justify-center items-center py-4">
+<p class="text-[#4b5563] dark:text-[#9ca3af] text-sm font-medium">
+                    Remember your password? 
+                    <a class="text-primary hover:text-primary/80 font-bold ml-1 transition-colors" href="#">Login</a>
+</p>
 </div>
-<!-- Divider (Optional visual separation, minimal) -->
-<div class="w-12 h-1 bg-gray-100 dark:bg-gray-800 rounded-full mb-6"></div>
-<!-- Tertiary Action (Login Link) -->
-<a class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest hover:text-primary dark:hover:text-white transition-colors" href="#">
-                Continue to Login
-            </a>
 </div>
 </div>
 </body></html>
